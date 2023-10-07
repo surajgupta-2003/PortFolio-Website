@@ -1,0 +1,348 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+    --lighting-color: #177999;
+    --dark-color: #003d62;
+    --darker-color: #003251;
+    --secondary-color: #fff700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body,
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    line-height: 1.4;
+    scroll-behavior: smooth;
+    color: white;
+    background-color:#177999;
+}
+
+body {
+    font-size: 1.4rem;
+}
+
+.container {
+    max-width: 1300px;
+    height: 5rem;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    border-bottom: 2px solid var(--secondary-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--lighting-color);
+}
+
+section {
+    scroll-margin-top: 50px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+}
+
+nav li {
+    font-size: 1.8rem;
+    border: 2px solid black;
+    border-bottom: 0.4rem transparent solid;
+    transition: 0.3s ease-in-out;
+    padding: 5px;
+}
+
+nav li:hover {
+    border-bottom: 0.4rem var(--secondary-color) solid;
+    opacity: 100%;
+    box-shadow: 0 0 70px #2196f3, 0 0 70px #2196f3, 0 0 70px #2196f3;
+    transition-delay: 0.001s;
+    filter: brightness(500%);
+}
+
+
+#hero {
+    background: var(--dark-color);
+    padding: 4rem 0;
+    border-bottom: 4px solid var(--lighting-color);
+    max-height: 100vh;
+}
+
+#hero .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#suraj {
+    height: 25rem;
+    width: 25rem;
+    border-radius: 50%;
+    border: 1rem solid yellow;
+    margin-right: -18rem;
+    margin-top: 18rem;
+}
+
+#suraj:hover {
+    border: none;
+}
+
+.name_text {
+    color: yellow;
+}
+
+.hero_content {
+    display: grid;
+    place-items: center;
+}
+
+.unique{
+    cursor: pointer;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hi_text {
+    font-size: 6rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.name_text {
+    font-size: 5rem;
+}
+
+#hero h2 {
+    font-size: 4rem;
+    font-weight: bold;
+
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: 0.15em solid orange;
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    /* Adjust as needed */
+    animation: typing 5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: orange;
+    }
+}
+
+#aboutme,
+#achievement,
+#hobbies,
+#strength {
+    color: white;
+    margin-top: 1rem;
+    margin-left: 4rem;
+}
+
+#aboutme span {
+    font-weight: bold;
+    font-size: 1.4rem;
+    border-bottom: .1rem solid #003251;
+}
+
+/* Project Section */
+
+#project,
+#certification {
+    background: var(--darker-color);
+    margin-top: 3rem;
+}
+
+#certification{
+    padding-bottom: 3rem;
+}
+
+#project h2,
+#certification h2 {
+    font-size: 3rem;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.box-content h2:hover {
+    color: yellow;
+    border-bottom: 1rem solid yellow;
+}
+
+.projects,
+.certifications {
+    display: flex;
+    height: 400px;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 4rem;
+}
+
+.box {
+    height: 350px;
+    width: 31%;
+    background-color: rgb(205 205 205);
+    background-color: white;
+    padding: 20px 0px 15px;
+}
+
+.box-content {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+
+.box-img {
+    background-size: cover;
+    height: 300px;
+    margin-bottom: 1rem;
+    margin-top: 0rem;
+}
+
+
+
+/* Contact Section */
+#contact {
+    background: black;
+    height: 20vh;
+    width: 100vw;
+}
+
+#contact .container {
+    height: 18vh;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    justify-content: center;
+}
+
+.top_contact {
+    max-width: 800px;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+}
+
+.contact_way {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.contact_way i {
+    font-size: 2rem;
+}
+
+.contact_way h3 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.bottom_contact {
+    max-width: 400px;
+    gap: 1rem;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+}
+
+/* Media Query */
+
+@media (max-width: 786px) {
+    html {
+        font-size: 40%;
+    }
+
+    #hero .container {
+        flex-direction: column;
+    }
+
+    .hero_image {
+        display: grid;
+        place-items: center;
+    }
+
+    #contact .container {
+        height: 70vh;
+    }
+}
+
+@media (max-width: 500px) {
+    html {
+        font-size: 32%;
+    }
+
+    #hero .container {
+        flex-direction: column;
+    }
+
+    .hero_image {
+        display: grid;
+        place-items: center;
+    }
+
+    #contact .container {
+        height: 50vh;
+    }
+}
+
+@media screen and (width<=600px){
+       .container,.container>ul,.certifications,.projects{
+        flex-direction: column;
+       }
+       
+}
+@media screen and (max-width:200px){
+
+}
+
+
